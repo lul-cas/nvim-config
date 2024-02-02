@@ -5,10 +5,10 @@ M.ui = { theme = 'catppuccin' }
 vim.opt.wrap = false
 
 -- close
-vim.api.nvim_set_keymap('n', '<C-q>', ':q<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<C-q>', ':q!<CR>', { noremap = true, silent = true })
 
 -- close with save
-vim.api.nvim_set_keymap('n', '<C-s>', ':wq<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<F2>', ':wq<CR>', { noremap = true, silent = true })
 
 -- open terminal on new buffer
 vim.api.nvim_set_keymap('n', '<C-t>', ':terminal<CR>', { noremap = true, silent = true })
