@@ -16,7 +16,11 @@ vim.api.nvim_set_keymap('n', '<C-t>', ':terminal<CR>', { noremap = true, silent 
 -- close current buffer
 vim.api.nvim_set_keymap('n', '<C-x>', ':bd<CR>', { noremap = true, silent = true })
 
+
 -- shift tab
-vim.api.nvim_set_keymap('v', '<S-Tab>', '<gv', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '<S-Tab>', '<-C-d>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('v', '<S-Tab>', '<', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<S-Tab>', '<<', { noremap = true, silent = true })
+--
 
 return M
