@@ -52,6 +52,7 @@ local plugins = {
         "ruff",
         "black",
         "debugpy",
+        "typescript-language-server"
       },
     },
   },
