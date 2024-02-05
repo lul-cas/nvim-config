@@ -5,7 +5,7 @@ M.override = {
   Comment = {
     italic = true,
   },
-  NvDashAscii = { bg = "NONE", fg = "vibrant_green" },
+  NvDashAscii = { bg = "black", fg = "vibrant_green" },
   NvDashButtons = { bg = "NONE" },
 }
 

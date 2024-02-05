@@ -7,6 +7,9 @@ lspconfig.pyright.setup({
   on_attach = on_attach,
   capabilities = capabilities,
   filetypes = {"python"},
+  init_options = {
+    disableSuggestions = false,
+  }
 })
 
 lspconfig.tsserver.setup({

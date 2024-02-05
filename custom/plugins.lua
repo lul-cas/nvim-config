@@ -1,5 +1,11 @@
 local plugins = {
   {
+    "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+    config = function ()
+      require("lsp_lines").setup()
+    end
+  },
+  {
     "rcarriga/nvim-dap-ui",
     dependencies = "mfussenegger/nvim-dap",
     config = function ()
