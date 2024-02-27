@@ -4,7 +4,7 @@ local M = {}
 local highlights = require "custom.highlights"
 
 M.ui = {
-  theme = 'catppuccin',
+  theme = 'tokyonight',
   hl_override = highlights.override,
   hl_add = highlights.add,
 }
@@ -47,6 +47,17 @@ vim.api.nvim_set_keymap('v', '<S-Tab>', '<', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<S-Tab>', '<<', { noremap = true, silent = true })
 --
 
+-- tab
+vim.api.nvim_set_keymap('i', '<S-a>', '<Space><Space><Space><Space>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('v', '<S-a>', '>gv', {noremap = true, silent = true})
 
+-- undo ctrl z
+vim.api.nvim_set_keymap('i', '<C-z>', '<Esc>u', {noremap = true, silent = true})
+
+-- redo ctrl y
+vim.api.nvim_set_keymap('i', '<C-y>', '<C-r>', {noremap = true, silent = true})
+
+-- copilot next
+vim.api.nvim_set_keymap('i', '<C-/>', '<Plug>(copilot-next)', {noremap = true, silent = true})
 
 return M
