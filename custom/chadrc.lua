@@ -48,8 +48,8 @@ vim.api.nvim_set_keymap('n', '<S-Tab>', '<<', { noremap = true, silent = true })
 --
 
 -- tab
-vim.api.nvim_set_keymap('i', '<S-a>', '<Space><Space>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('v', '<S-a>', '>gv', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('i', '<C-f>', '<Space><Space>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('v', '<C-f>', '>gv', {noremap = true, silent = true})
 
 -- undo ctrl z
 vim.api.nvim_set_keymap('i', '<C-z>', '<Esc>u', {noremap = true, silent = true})
