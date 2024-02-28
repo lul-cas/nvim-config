@@ -48,7 +48,7 @@ vim.api.nvim_set_keymap('n', '<S-Tab>', '<<', { noremap = true, silent = true })
 --
 
 -- tab
-vim.api.nvim_set_keymap('i', '<S-a>', '<Space><Space><Space><Space>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('i', '<S-a>', '<Space><Space>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('v', '<S-a>', '>gv', {noremap = true, silent = true})
 
 -- undo ctrl z
@@ -59,5 +59,8 @@ vim.api.nvim_set_keymap('i', '<C-y>', '<C-r>', {noremap = true, silent = true})
 
 -- copilot next
 vim.api.nvim_set_keymap('i', '<C-/>', '<Plug>(copilot-next)', {noremap = true, silent = true})
+
+-- vertical buffer split
+vim.api.nvim_set_keymap('n', '<C-b>', ':vsplit<CR>', { noremap = true, silent = true })
 
 return M
