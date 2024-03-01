@@ -63,4 +63,8 @@ vim.api.nvim_set_keymap('i', '<C-/>', '<Plug>(copilot-next)', {noremap = true, s
 -- vertical buffer split
 vim.api.nvim_set_keymap('n', '<C-b>', ':vsplit<CR>', { noremap = true, silent = true })
 
+-- Move line up or down in visual mode
+vim.api.nvim_set_keymap('n', '<C-k>', ':m .-2<CR>==', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<C-j>', ':m .+1<CR>==', { noremap = true, silent = true })
+
 return M
