@@ -48,7 +48,7 @@ vim.api.nvim_set_keymap('n', '<S-Tab>', '<<', { noremap = true, silent = true })
 --
 
 -- tab
-vim.api.nvim_set_keymap('i', '<C-f>', '<Space><Space>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('i', '<C-f>', '<Space><Space><Space><Space>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('v', '<C-f>', '>gv', {noremap = true, silent = true})
 
 -- undo ctrl z
@@ -66,5 +66,8 @@ vim.api.nvim_set_keymap('n', '<C-b>', ':vsplit<CR>', { noremap = true, silent = 
 -- Move line up or down in visual mode
 vim.api.nvim_set_keymap('n', '<C-j>', ':m .+1<CR>==', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<C-k>', ':m .-2<CR>==', { noremap = true, silent = true })
+
+-- Enter c-visual mode
+vim.api.nvim_set_keymap('n', '<C-e>', '<C-v>', {noremap = true})
 
 return M
