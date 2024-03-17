@@ -57,8 +57,7 @@ local plugins = {
         "mypy",
         "ruff",
         "black",
-        "debugpy",
-        "typescript-language-server"
+        "debugpy"
       },
     },
   },
@@ -83,6 +82,9 @@ local plugins = {
   },
   {
     "sbdchd/neoformat"
+  },
+  {
+  "microsoft/vscode-cpptools"
   }
 }
 return plugins
