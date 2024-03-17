@@ -57,7 +57,12 @@ local plugins = {
         "mypy",
         "ruff",
         "black",
-        "debugpy"
+        "debugpy",
+        "omnisharp",
+        "clangd",
+        "eslint-lsp",
+        "prettier",
+        "rust-analyzer"
       },
     },
   },
@@ -84,7 +89,10 @@ local plugins = {
     "sbdchd/neoformat"
   },
   {
-  "microsoft/vscode-cpptools"
+    "microsoft/vscode-cpptools"
+  },
+  {
+    "jmederosalvarado/roslyn.nvim"
   }
 }
 return plugins

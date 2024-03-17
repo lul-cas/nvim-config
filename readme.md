@@ -31,5 +31,12 @@ require "plugins"
 require'lspconfig'.pyright.setup{}
 require'lsp_lines'.setup{}
 require'lspconfig'.tsserver.setup{}
+require'lspconfig'.omnisharp.setup{
+  filetypes = {"cs", "vb", "cshtml", "razor"},
+  cmd = {"omnisharp", "--languageserver", "--hostPID", tostring(vim.fn.getpid())}
+}
 
+if vim.loop.os_uname().sysname == "Windows_NT" then
+   require('nvim-treesitter.install').compilers = { "clang" }
+end
 ```
