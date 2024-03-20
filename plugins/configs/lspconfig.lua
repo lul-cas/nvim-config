@@ -5,7 +5,6 @@ local M = {}
 local utils = require "core.utils"
 
 -- export on_attach & capabilities for custom lspconfigs
-
 M.on_attach = function(client, bufnr)
   utils.load_mappings("lspconfig", { buffer = bufnr })
 
@@ -13,8 +12,11 @@ M.on_attach = function(client, bufnr)
     require("nvchad.signature").setup(client)
   end
 
-  if not utils.load_config().ui.lsp_semantic_tokens and client.supports_method "textDocument/semanticTokens" then
-    client.server_capabilities.semanticTokensProvider = nil
+  if client.resolved_capabilities.document_formatting then
+    vim.cmd [[augroup Format]]
+    vim.cmd [[autocmd! * <buffer>]]
+    vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()]]
+    vim.cmd [[augroup END]]
   end
 end
 
@@ -39,6 +41,7 @@ M.capabilities.textDocument.completion.completionItem = {
 }
 
 require("lspconfig").lua_ls.setup {
+  on_init = M.on_init,
   on_attach = M.on_attach,
   capabilities = M.capabilities,
 

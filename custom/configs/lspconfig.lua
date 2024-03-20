@@ -27,10 +27,3 @@ lspconfig.omnisharp.setup({
   capabilities = capabilities,
   cmd = {"omnisharp", "--languageserver", "--hostPID", tostring(vim.fn.getpid())}
 })
-
-lspconfig.roslyn.setup({
-  dotnet_cmd = "dotnet",
-  roslyn_version = "4.8.0-3.23475.7",
-  on_attach = on_attach,
-  capabilities = capabilities
-})

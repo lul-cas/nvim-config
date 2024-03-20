@@ -94,5 +94,6 @@ local plugins = {
   {
     "jmederosalvarado/roslyn.nvim"
   }
+
 }
 return plugins
