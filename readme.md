@@ -39,4 +39,16 @@ require'lspconfig'.omnisharp.setup{
 if vim.loop.os_uname().sysname == "Windows_NT" then
    require('nvim-treesitter.install').compilers = { "clang" }
 end
+
+vim.api.nvim_exec([[
+  function! Format()
+    execute '%!prettier --stdin-filepath %'
+    write
+  endfunction
+
+  augroup Format
+    autocmd!
+    autocmd BufWritePre *.js call Format()
+  augroup END
+]], false)
 ```
