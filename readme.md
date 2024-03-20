@@ -41,14 +41,20 @@ if vim.loop.os_uname().sysname == "Windows_NT" then
 end
 
 vim.api.nvim_exec([[
-  function! Format()
+  function! FormatJS()
     execute '%!prettier --stdin-filepath %'
+    write
+  endfunction
+
+  function! FormatPython()
+    execute '%!black -q -'
     write
   endfunction
 
   augroup Format
     autocmd!
-    autocmd BufWritePre *.js call Format()
+    autocmd BufWritePre *.js call FormatJS()
+    autocmd BufWritePre *.py call FormatPython()
   augroup END
 ]], false)
 ```
