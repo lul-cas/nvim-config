@@ -4,11 +4,13 @@ local M = {}
 M.override = {
   Comment = {
     italic = true,
+    fg = "dark_purple",
   },
-  NvDashAscii = {bg = "NONE", fg = "pink" },
-  NvDashButtons = { bg = "NONE", fg = "pink" },
-  NvimTreeWinSeparator = { bg = "NONE", fg = "pink" },
-  NvimTreeCursorLine = { bg = "pink", fg = "white" },
+  NvDashAscii = {bg = "NONE", fg = "red" },
+  NvDashButtons = { bg = "NONE", fg = "red" },
+  NvimTreeWinSeparator = { bg = "NONE", fg = "red" },
+  NvimTreeCursorLine = { bg = "red", fg = "white" },
 }
+
 
 return M
