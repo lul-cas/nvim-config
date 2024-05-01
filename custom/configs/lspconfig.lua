@@ -27,3 +27,20 @@ lspconfig.omnisharp.setup({
   capabilities = capabilities,
   cmd = {"omnisharp", "--languageserver", "--hostPID", tostring(vim.fn.getpid())}
 })
+
+if not lspconfig.rust_analyzer then
+  config.rust_analyzer = {
+    default_config = {
+      cmd = { "rust-analyzer" },
+      filetypes = { "rust" },
+      root_dir = lspconfig.util.root_pattern("Cargo.toml", "rust-project.json"),
+      settings = {
+        ["rust-analyzer"] = {
+          checkOnSave = {
+            command = "clippy"
+          };
+        };
+      };
+    };
+  };
+end

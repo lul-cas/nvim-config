@@ -62,7 +62,8 @@ local plugins = {
         "clangd",
         "eslint-lsp",
         "prettier",
-        "rust-analyzer"
+        "rust-analyzer",
+        "rustywind",
       },
     },
   },

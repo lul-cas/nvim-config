@@ -6,10 +6,10 @@ M.override = {
     italic = true,
     fg = "dark_purple",
   },
-  NvDashAscii = {bg = "NONE", fg = "red" },
-  NvDashButtons = { bg = "NONE", fg = "red" },
-  NvimTreeWinSeparator = { bg = "NONE", fg = "red" },
-  NvimTreeCursorLine = { bg = "red", fg = "white" },
+  NvDashAscii = {bg = "NONE", fg = "teal" },
+  NvDashButtons = { bg = "NONE", fg = "teal" },
+  NvimTreeWinSeparator = { bg = "NONE", fg = "teal" },
+  NvimTreeCursorLine = { bg = "teal", fg = "white" },
 }
 
 
