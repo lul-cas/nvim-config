@@ -70,4 +70,10 @@ vim.api.nvim_set_keymap('n', '<C-k>', ':m .-2<CR>==', { noremap = true, silent =
 -- Enter c-visual mode
 vim.api.nvim_set_keymap('n', '<C-e>', '<C-v>', {noremap = true})
 
+-- Tab to accept github copilot suggestion if available, otherwise insert tab 
+
+vim.api.nvim_set_keymap('i', '<Tab>', 'copilot#Accept("<Tab>")', { noremap = true, silent = true, expr = true })
+
+-- vim.api.nvim_set_keymap('i', '<Tab-q>', 'copilot#Accept("<CR>")', { noremap = true, silent = true, expr = true })
+
 return M
