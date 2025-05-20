@@ -3,6 +3,22 @@ local on_attach = config.on_attach
 local capabilities = config.capabilities
 local lspconfig = require("lspconfig")
 
+vim.filetype.add({
+  extension = {
+    twig = "html"
+  }
+})
+
+lspconfig.intelephense.setup({
+    settings = {
+        intelephense = {
+            files = {
+                maxSize = 5000000,
+            },
+        },
+    },
+})
+
 lspconfig.pyright.setup({
   on_attach = on_attach,
   capabilities = capabilities,
@@ -44,3 +60,9 @@ if not lspconfig.rust_analyzer then
     };
   };
 end
+
+lspconfig.clangd.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+  cmd = { "clangd", "--background-index" }
+})
