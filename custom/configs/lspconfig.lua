@@ -9,6 +9,23 @@ vim.filetype.add({
   }
 })
 
+lspconfig.jdtls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  cmd = { "jdtls" },
+  root_dir = lspconfig.util.root_pattern(".git", "mvnw", "gradlew", "pom.xml", "build.gradle"),
+  settings = {
+    java = {
+      format = {
+        enabled = true,
+      },
+      contentProvider = {
+        preferred = "fernflower",
+      },
+    },
+  },
+}
+
 lspconfig.intelephense.setup({
     settings = {
         intelephense = {
